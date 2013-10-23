@@ -1,0 +1,25 @@
+As ROOT
+
+apt-get update
+apt-get upgrade
+
+
+# Installation de nodejs
+apt-get install git-core git scons build-essential scons libpcre++-dev xulrunner-dev libboost-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev
+
+mkdir /home/$USER/install
+cd /home/$USER/install
+wget http://nodejs.org/dist/v0.10.18/node-v0.10.18.tar.gz
+tar -zxf node-v0.10.18.tar.gz
+cd node-v0.10.18
+./configure
+make
+make install
+
+
+# GitHUB
+apt-get install git
+git config --global user.name "TheLynx"                                                                 
+git config --global user.email "dev_github@ewintz.net"       
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
